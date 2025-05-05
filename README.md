@@ -2,6 +2,10 @@
 
 ## Education
 
+**M.Sc. in Data Science and Artificial Intelligence (Reading)**  
+*University of Moratuwa, Sri Lanka (2025 – Now)*   
+- Notable Courses: Big Data Technologies
+  
 **B.Sc. in Biomedical Engineering**  
 *University of Moratuwa, Sri Lanka (2018–2023)*  
 - Second Class Upper Division (GPA: 3.57/4.2)  
@@ -19,13 +23,15 @@
 
 ## Work Experience
 
-**Synergen Technology Labs (Pvt) Ltd** — Biomedical Research Engineer  
-*Jul 2023 – Present*  
-- Member of the Algorithm & Development team  
+**Research Engineer** — Jul 2023 – Present
+*Synergen Technology Labs (Pvt) Ltd*
+
+- Specialized in biosignal processing algorithms for electrocardiogram (ECG) data analysis
+-  Working on algorithm development, noise filtering, and arrhythmia detection
 - Skills: Python, MATLAB | Teamwork, Time Management, Communication
 
-**Effective Solutions (Pvt) Ltd** — Trainee R&D Biomedical Engineer  
-*Sept 2020 – Aug 2021*  
+**Trainee R&D Biomedical Engineer** — Sept 2020 – Aug 2021
+*Effective Solutions (Pvt) Ltd*  
 - Developed architecture for WiFi configuration in medical devices  
 - Performed signal comparison using MATLAB and Java  
 - Skills: Python, Java, Flutter, React, Node.js, MongoDB, SQL, Git
@@ -86,10 +92,13 @@ Teamwork, Time Management, Documentation, Problem-Solving, Presentation, Leaders
 
 ## Volunteering
 
+**IEEE EMBS Sri Lanka Section**
+- Webmaster (2025 - Now)
+
 **IEEE EMBS Moratuwa Chapter**  
 - Chairperson – Brainstorm 2023  
 - Vice Chair – Brainstorm 2021  
-- Founder – Medi Engi
+- Founder – Medi-Engi collaboration
 
 **IEEE Young Professionals**  
 - Webmaster – StudPro 5.0 (React + Firebase)  
