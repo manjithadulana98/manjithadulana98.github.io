@@ -95,14 +95,3 @@ Teamwork, Time Management, Documentation, Problem-Solving, Presentation, Leaders
 - Webmaster – StudPro 5.0 (React + Firebase)  
 - Industry Lead – Y2NPro, EMBS Subcommittee
 
----
-
-## References
-
-**Eng. Pawan Samaratunga**  
-Associate Technical Lead – Synergen Technology Labs  
-+94 71 063 5299 | pawan.s@synergentl.com  
-
-**Dr. Ravindra Udagamage**  
-Senior Medical Officer – District General Hospital, Gampaha  
-+94 77 588 0735
