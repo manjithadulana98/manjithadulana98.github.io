@@ -1,9 +1,7 @@
-# 👨‍🔬 Manjitha Kularatne
+# Manjitha Kularatne
 
-**Research and Development Engineer | M.Sc. Data Science and AI Student | B.Sc. Biomedical Engineering Graduate**
-
-🚀 *Currently working on ECG Biosignal Processing Algorithms at Synergen Technology Labs*  
-🎓 *M.Sc. Data Science & AI (University of Moratuwa)*  
+🚀 *Currently working on Biosignal Processing Algorithms at Synergen Technology Labs*  
+🎓 *M.Sc. Data Science & AI (University of Moratuwa) | reading*  
 🎓 *B.Sc. in Biomedical Engineering (University of Moratuwa)*
 
 > **“AI won't replace doctors, but doctors using AI will replace those who don't.”**
@@ -114,6 +112,7 @@ Teamwork, Time Management, Documentation, Problem-Solving, Presentation, Leaders
 
 <p align="left">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="30"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/matlab/matlab-original.svg" width="30"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" width="30"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="30"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="30"/>
@@ -123,7 +122,7 @@ Teamwork, Time Management, Documentation, Problem-Solving, Presentation, Leaders
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="30"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Neo4j-logo2024color.png" width="60"/>
   <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" width="60"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/arduino/arduino-original-wordmark.svg" width="60"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/arduino/arduino-original-wordmark.svg" width="30"/>
 </p>
 
 ---
