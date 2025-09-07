@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.13e29def.js",
+    "static/js/453.8f83d3fd.chunk.js": "/static/js/453.8f83d3fd.chunk.js",
+    "static/media/EMBS_SL.jpg": "/static/media/EMBS_SL.8f15ca2ea8c3f057285b.jpg",
+    "static/media/IEEE_YP.jpg": "/static/media/IEEE_YP.3fbd8ee5c2a952d042ec.jpg",
+    "static/media/EMBS_UOM.jpg": "/static/media/EMBS_UOM.9f0d27e2666c827200b3.jpg",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.13e29def.js.map": "/static/js/main.13e29def.js.map",
+    "453.8f83d3fd.chunk.js.map": "/static/js/453.8f83d3fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.13e29def.js"
+  ]
+}
