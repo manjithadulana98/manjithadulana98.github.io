@@ -6,7 +6,6 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Achievements from './components/Achievements';
-import Volunteering from './components/Volunteering';
 import Contact from './components/Contact';
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/achievements" element={<Achievements />} />
-        <Route path="/volunteering" element={<Volunteering />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

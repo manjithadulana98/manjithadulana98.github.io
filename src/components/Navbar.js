@@ -9,7 +9,6 @@ const navItems = [
   { label: 'Projects', path: '/projects' },
   { label: 'Skills', path: '/skills' },
   { label: 'Achievements', path: '/achievements' },
-  { label: 'Volunteering', path: '/volunteering' },
   { label: 'Contact', path: '/contact' }
 ];
 
@@ -26,7 +25,18 @@ const Navbar = () => {
       }}
     >
       <Toolbar>
-        <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center', gap: 3 }}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            gap: { xs: 0.5, sm: 1.5, md: 3 },
+            overflowX: 'auto',
+            whiteSpace: 'nowrap',
+            '&::-webkit-scrollbar': { height: 0 },
+            scrollbarWidth: 'none',
+          }}
+        >
           {navItems.map(({ label, path }) => (
             <Button
               key={label}
@@ -34,6 +44,9 @@ const Navbar = () => {
               to={path}
               sx={{
                 textTransform: 'none',
+                fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.875rem' },
+                minWidth: 'auto',
+                px: { xs: 1, sm: 1.5, md: 2 },
                 fontWeight: location.pathname === path ? 700 : 400,
                 color: location.pathname === path ? 'primary.main' : 'text.primary',
                 borderBottom: location.pathname === path ? '2px solid' : '2px solid transparent',

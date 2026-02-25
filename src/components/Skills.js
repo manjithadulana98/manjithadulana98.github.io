@@ -1,4 +1,14 @@
-import { Box, Typography, Grid, Card, CardContent, CardMedia } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  CardMedia,
+  Stack,
+  Avatar,
+} from '@mui/material';
+import BuildIcon from '@mui/icons-material/Build';
 
 const skills = [
   {
@@ -15,91 +25,130 @@ const skills = [
       { name: 'SQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
       { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
       { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-      { name: 'Arduino', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' }
-    ]
+      { name: 'Arduino', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' },
+    ],
   },
   {
-  title: 'Industry Tools',
-  list: [
-    { icon: 'http://upload.wikimedia.org/wikipedia/en/d/d2/SolidWorks_Logo.svg' }, // Logo hard to find, skip for now
-    {  icon: 'https://easyeda.com/favicon.ico' },
-    { icon: 'https://upload.wikimedia.org/wikipedia/commons/e/eb/Altium_Limited_logo.svg' },
-    { icon: 'https://upload.wikimedia.org/wikipedia/commons/c/c0/Linear_Technology_Corporation_logo.svg' },
-    {  icon: 'https://upload.wikimedia.org/wikipedia/en/2/20/Power_BI_logo.svg' },
-  
-    {  icon: 'http://upload.wikimedia.org/wikipedia/en/b/be/NIMS10_logocap.png' }, // No free logo
-    { icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg' },
-    { icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg' }
-  ]
-}
-,
+    title: 'Industry Tools',
+    list: [
+      { name: 'SolidWorks', icon: 'https://img.icons8.com/color/48/solidworks.png' },
+      { name: 'EasyEDA', icon: 'https://easyeda.com/favicon.ico' },
+      { name: 'Altium', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/labview/labview-original.svg' },
+      { name: 'LTspice', icon: 'https://img.icons8.com/fluency/48/circuit.png' },
+      { name: 'Power BI', icon: 'https://img.icons8.com/color/48/power-bi.png' },
+      { name: 'NI Multisim', icon: 'https://img.icons8.com/fluency/48/electronics.png' },
+      { name: 'WordPress', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg' },
+      { name: 'Premiere Pro', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg' },
+    ],
+  },
   {
-  title: 'Soft Skills',
-  list: [
-    {
-      name: 'Teamwork',
-      icon: 'https://cdn-icons-png.flaticon.com/512/3771/3771435.png'
-    },
-    {
-      name: 'Time Management',
-      icon: 'https://cdn-icons-png.flaticon.com/512/5358/5358780.png'
-    },
-    {
-      name: 'Documentation',
-      icon: 'https://cdn-icons-png.flaticon.com/512/3145/3145765.png'
-    },
-    {
-      name: 'Problem-Solving',
-      icon: 'https://cdn-icons-png.flaticon.com/512/1040/1040230.png'
-    },
-    {
-      name: 'Presentation',
-      icon: 'https://cdn-icons-png.flaticon.com/512/1685/1685369.png'
-    },
-    {
-      name: 'Leadership',
-      icon: 'https://cdn-icons-png.flaticon.com/512/1040/1040214.png'
-    }
-  ]
-}
-
-
-
+    title: 'Soft Skills',
+    list: [
+      { name: 'Teamwork', icon: 'https://cdn-icons-png.flaticon.com/512/3771/3771435.png' },
+      { name: 'Time Management', icon: 'https://cdn-icons-png.flaticon.com/512/5358/5358780.png' },
+      { name: 'Documentation', icon: 'https://cdn-icons-png.flaticon.com/512/3145/3145765.png' },
+      { name: 'Problem-Solving', icon: 'https://cdn-icons-png.flaticon.com/512/1040/1040230.png' },
+      { name: 'Presentation', icon: 'https://cdn-icons-png.flaticon.com/512/1685/1685369.png' },
+      { name: 'Leadership', icon: 'https://cdn-icons-png.flaticon.com/512/1040/1040214.png' },
+    ],
+  },
 ];
 
 const Skills = () => (
-  <Box sx={{ padding: '2rem' }}>
-    <Typography variant="h4" gutterBottom>
-      🛠️ Skills
+  <Box
+    sx={{
+      padding: { xs: '1.5rem', md: '3rem' },
+      maxWidth: '1000px',
+      margin: 'auto',
+    }}
+  >
+    {/* Page Title */}
+    <Typography
+      variant="h4"
+      sx={{ fontWeight: 800, mb: 1, textAlign: 'center' }}
+    >
+      Skills
     </Typography>
-    <Grid container spacing={4}>
-      {skills.map((category, idx) => (
-        <Grid item xs={12} sm={6} md={4} key={idx}>
-          <Card elevation={3} sx={{ height: '100%', borderRadius: 3 }}>
-            <CardContent>
-              <Typography variant="h6" gutterBottom>
-                {category.title}
-              </Typography>
-              <Grid container spacing={2}>
-                {category.list.map((skill, i) => (
-                  <Grid item xs={6} key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    {skill.icon && (
-                      <CardMedia
-                        component="img"
-                        image={skill.icon}
-                        alt={skill.name}
-                        sx={{  height: 24 }}
-                      />
-                    )}
-                    <Typography variant="body2">{skill.name}</Typography>
-                  </Grid>
-                ))}
-              </Grid>
-            </CardContent>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
+    <Typography
+      variant="body1"
+      color="text.secondary"
+      sx={{ textAlign: 'center', mb: 5, maxWidth: 520, mx: 'auto' }}
+    >
+      Technical proficiencies, industry tools, and interpersonal strengths
+    </Typography>
+
+    <Box sx={{ bgcolor: '#f7f7f7', borderRadius: 4, p: { xs: 2, md: 3.5 } }}>
+      <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 3 }}>
+        <Avatar sx={{ bgcolor: 'primary.main', width: 40, height: 40 }}>
+          <BuildIcon />
+        </Avatar>
+        <Typography variant="h5" sx={{ fontWeight: 700 }}>
+          Skill Set
+        </Typography>
+      </Stack>
+
+      <Grid container spacing={3}>
+        {skills.map((category, idx) => (
+          <Grid item xs={12} sm={6} md={4} key={idx}>
+            <Card
+              elevation={0}
+              sx={{
+                height: '100%',
+                borderRadius: 2.5,
+                border: '1px solid',
+                borderColor: 'divider',
+                bgcolor: '#ffffff',
+                transition: 'all 0.25s',
+                '&:hover': { borderColor: 'primary.light', boxShadow: 2 },
+              }}
+            >
+              <CardContent sx={{ p: 2.5 }}>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ fontWeight: 700, mb: 2, color: 'primary.main' }}
+                >
+                  {category.title}
+                </Typography>
+                <Grid container spacing={1.5}>
+                  {category.list.map((skill, i) => (
+                    <Grid
+                      item
+                      xs={6}
+                      key={i}
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 1,
+                      }}
+                    >
+                      {skill.icon && (
+                        <CardMedia
+                          component="img"
+                          image={skill.icon}
+                          alt={skill.name}
+                          sx={{
+                            width: 22,
+                            height: 22,
+                            objectFit: 'contain',
+                            flexShrink: 0,
+                          }}
+                        />
+                      )}
+                      <Typography
+                        variant="body2"
+                        sx={{ fontSize: '0.8rem', lineHeight: 1.3 }}
+                      >
+                        {skill.name}
+                      </Typography>
+                    </Grid>
+                  ))}
+                </Grid>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   </Box>
 );
 
