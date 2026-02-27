@@ -9,6 +9,7 @@ import {
   Avatar,
 } from '@mui/material';
 import BuildIcon from '@mui/icons-material/Build';
+import { Helmet } from 'react-helmet-async';
 
 const skills = [
   {
@@ -55,6 +56,12 @@ const skills = [
 ];
 
 const Skills = () => (
+  <>
+    <Helmet>
+      <title>Skills | Manjitha Kularatne</title>
+      <meta name="description" content="Technical skills of Manjitha Kularatne - Python, JavaScript, MATLAB, React, Machine Learning, Deep Learning, biosignal processing, and more." />
+      <link rel="canonical" href="https://manjithadulana98.github.io/skills" />
+    </Helmet>
   <Box
     sx={{
       padding: { xs: '1.5rem', md: '3rem' },
@@ -150,6 +157,7 @@ const Skills = () => (
       </Grid>
     </Box>
   </Box>
+  </>
 );
 
 export default Skills;

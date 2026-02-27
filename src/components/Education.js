@@ -19,6 +19,7 @@ import {
 } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import { Helmet } from 'react-helmet-async';
 
 const education = [
   {
@@ -102,6 +103,12 @@ const academicStrengths = [
 ];
 
 const Education = () => (
+  <>
+    <Helmet>
+      <title>Education | Manjitha Kularatne</title>
+      <meta name="description" content="Academic background of Manjitha Kularatne - M.Sc in Data Science & AI at University of Moratuwa, B.Sc in Biomedical Engineering. Education timeline and coursework." />
+      <link rel="canonical" href="https://manjithadulana98.github.io/education" />
+    </Helmet>
   <Box
     sx={{
       padding: { xs: '1.5rem', md: '3rem' },
@@ -270,6 +277,7 @@ const Education = () => (
       </Grid>
     </Box>
   </Box>
+  </>
 );
 
 export default Education;

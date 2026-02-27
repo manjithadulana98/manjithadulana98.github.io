@@ -11,6 +11,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import { Helmet } from 'react-helmet-async';
 
 const contactLinks = [
   {
@@ -37,6 +38,12 @@ const contactLinks = [
 ];
 
 const Contact = () => (
+  <>
+    <Helmet>
+      <title>Contact | Manjitha Kularatne</title>
+      <meta name="description" content="Contact Manjitha Kularatne - Biomedical Engineer and Data Scientist. Reach out via email, LinkedIn, or GitHub for collaborations and opportunities." />
+      <link rel="canonical" href="https://manjithadulana98.github.io/contact" />
+    </Helmet>
   <Box
     sx={{
       padding: { xs: '1.5rem', md: '3rem' },
@@ -120,6 +127,7 @@ const Contact = () => (
       </Stack>
     </Box>
   </Box>
+  </>
 );
 
 export default Contact;

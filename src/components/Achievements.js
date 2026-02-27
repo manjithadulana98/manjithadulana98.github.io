@@ -21,6 +21,7 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import GroupsIcon from '@mui/icons-material/Groups';
 import ArticleIcon from '@mui/icons-material/Article';
 import StarIcon from '@mui/icons-material/Star';
+import { Helmet } from 'react-helmet-async';
 
 // Importing local logos
 import ieeeEMBSMoratuwaLogo from './logos/EMBS_UOM.jpg';
@@ -137,6 +138,12 @@ const SectionHeader = ({ icon, title, subtitle }) => (
 /* ─── COMPONENT ─── */
 
 const Achievements = () => (
+  <>
+    <Helmet>
+      <title>Achievements | Manjitha Kularatne</title>
+      <meta name="description" content="Achievements and publications by Manjitha Kularatne - IEEE EMBS leadership, research publications, conferences, and awards in biomedical engineering and AI." />
+      <link rel="canonical" href="https://manjithadulana98.github.io/achievements" />
+    </Helmet>
   <Box
     sx={{
       padding: { xs: '1.5rem', md: '3rem' },
@@ -450,6 +457,7 @@ const Achievements = () => (
       </Grid>
     </Box>
   </Box>
+  </>
 );
 
 export default Achievements;

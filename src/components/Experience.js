@@ -17,6 +17,7 @@ import {
   Avatar,
 } from '@mui/material';
 import WorkIcon from '@mui/icons-material/Work';
+import { Helmet } from 'react-helmet-async';
 
 const experiences = [
   {
@@ -38,6 +39,12 @@ const experiences = [
 ];
 
 const Experience = () => (
+  <>
+    <Helmet>
+      <title>Experience | Manjitha Kularatne</title>
+      <meta name="description" content="Professional experience of Manjitha Kularatne - Research Engineer at Synergen Technology Labs, working on ECG processing, AI systems, and healthcare solutions." />
+      <link rel="canonical" href="https://manjithadulana98.github.io/experience" />
+    </Helmet>
   <Box
     sx={{
       padding: { xs: '1.5rem', md: '3rem' },
@@ -175,6 +182,7 @@ const Experience = () => (
       </Timeline>
     </Box>
   </Box>
+  </>
 );
 
 export default Experience;

@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CodeIcon from '@mui/icons-material/Code';
+import { Helmet } from 'react-helmet-async';
 
 // Utility to render project cards
 const ProjectCard = ({ project }) => (
@@ -127,6 +128,12 @@ const ProjectSection = ({ title, projects }) => (
 // Main component
 const Projects = () => {
   return (
+    <>
+      <Helmet>
+        <title>Projects | Manjitha Kularatne</title>
+        <meta name="description" content="Notable projects by Manjitha Kularatne including ECG signal processing, medical imaging AI, healthcare machine learning, and biomedical engineering research." />
+        <link rel="canonical" href="https://manjithadulana98.github.io/projects" />
+      </Helmet>
     <Box
       sx={{
         padding: { xs: '1.5rem', md: '3rem' },
@@ -265,6 +272,7 @@ const Projects = () => {
         />
       </Box>
     </Box>
+    </>
   );
 };
 
