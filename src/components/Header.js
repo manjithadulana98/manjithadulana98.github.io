@@ -8,19 +8,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 // Icon list
 const techIcons = [
   { name: 'Python', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-  { name: 'Java', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
-  { name: 'JavaScript', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-  { name: 'C++', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
   { name: 'MATLAB', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg' },
+  { name: 'TensorFlow', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
+  { name: 'PyTorch', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
+  { name: 'C++', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
   { name: 'React', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-  { name: 'Flutter', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
-  { name: 'Node.js', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-  { name: 'MongoDB', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
-  { name: 'SQL', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
   { name: 'Git', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
   { name: 'Arduino', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' },
-  { name: 'Neo4j', src: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Neo4j-logo2024color.png' },
-  { name: 'Spark', src: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg' },
   { name: 'LaTeX', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg' }
 ];
 
@@ -88,12 +82,12 @@ const Header = () => {
       >
         <ReactTyped
           strings={[
-            'Biomedical Engineer',
-            'Data Scientist',
-            'AI Enthusiast',
-            'ECG Signal Expert',
-            'Researcher',
-            'React Developer',
+            'Biomedical Research Engineer',
+            'AI for Healthcare',
+            'ECG & Biosignal Processing',
+            'Medical Image Analysis',
+            'Regulatory & Clinical Validation',
+            'Data Science & AI',
           ]}
           typeSpeed={50}
           backSpeed={30}
@@ -111,9 +105,11 @@ const Header = () => {
           fontSize: { xs: '0.9rem', md: '1rem' },
         }}
       >
-        I specialize in biosignal processing and AI solutions for healthcare.
-        Currently a Research Engineer at Synergen Technology Labs and a
-        postgraduate student in Data Science & AI at University of Moratuwa.
+        Biomedical Research Engineer pursuing an M.Sc. in Data Science & AI
+        at the University of Moratuwa. I build and validate AI-assisted
+        healthcare solutions — from ECG arrhythmia detection to medical image
+        analysis — combining applied ML, statistical inference, and regulatory
+        expertise (FDA 510(k), ISO 13485, ISO 14971).
       </Typography>
 
       {/* Social Chips */}

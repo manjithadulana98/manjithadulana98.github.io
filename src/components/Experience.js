@@ -21,20 +21,24 @@ import { Helmet } from 'react-helmet-async';
 
 const experiences = [
   {
-    role: 'Research Engineer',
+    role: 'Biomedical Research Engineer',
     company: 'Synergen Technology Labs (Pvt) Ltd',
     duration: 'Jul 2023 – Present',
-    location: 'On-site',
-    description: `Contributed to AI-assisted ECG annotation systems, clinician variability studies, and statistical analysis protocols. Supported validation for FDA SaMD compliance and helped generate visual reports and clinical summaries.`,
-    skills: ['ECG Processing', 'Python', 'MATLAB', 'Statistics', 'FDA Compliance']
+    location: 'Sri Lanka · On-site',
+    description: `Developed and validated AI-assisted ECG systems for arrhythmia detection and designed clinical protocols assessing inter-rater variability and reliability.
+Conducted DFMEA to mitigate software failure modes and ensured alignment with ISO 14971 and ISO 13485.
+Authored validation protocols, clinical summaries, and traceability documents for FDA 510(k) submissions.
+Translated complex clinical datasets into statistical reports and visualizations driving design reviews.`,
+    skills: ['ECG Analysis', 'FDA 510(k)', 'ISO 14971', 'DFMEA', 'Python', 'MATLAB', 'Statistical Modeling']
   },
   {
     role: 'Trainee R&D Biomedical Engineer',
-    company: 'Effective Solutions (Pvt) Ltd',
-    duration: 'Jan 2022 – Jul 2022',
+    company: 'Effective Solutions (Pvt) Ltd — Jendo Health',
+    duration: 'Sep 2020 – Aug 2021',
     location: 'Sri Lanka',
-    description: `Assisted in developing a vascular monitoring system for the Jendo project. Built ESP32 Wi-Fi config system, implemented Wavelet-based filtering in backend, and improved Flutter app data quality.`,
-    skills: ['Flutter', 'ESP32', 'Python', 'Java', 'Wavelet Filtering']
+    description: `Architected signal-processing workflows for the Jendo cardiac monitoring device and benchmarked ECG outputs across MATLAB and embedded firmware environments.
+Designed device–app communication protocol and performed validation testing on medical-grade firmware and companion mobile app.`,
+    skills: ['Biosignal Processing', 'Embedded Systems', 'MATLAB', 'Firmware Validation']
   }
 ];
 
