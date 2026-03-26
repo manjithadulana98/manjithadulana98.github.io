@@ -108,8 +108,8 @@ const Header = () => {
         Biomedical Research Engineer pursuing an M.Sc. in Data Science & AI
         at the University of Moratuwa. I build and validate AI-assisted
         healthcare solutions — from ECG arrhythmia detection to medical image
-        analysis — combining applied ML, statistical inference, and regulatory
-        expertise (FDA 510(k), ISO 13485, ISO 14971).
+        analysis — combining applied Machine Learning, statistics, data analysis,automation and FDA compliance
+         (FDA 510(k), ISO 13485, ISO 14971).
       </Typography>
 
       {/* Social Chips */}
