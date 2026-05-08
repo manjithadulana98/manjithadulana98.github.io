@@ -24,27 +24,27 @@ import { Helmet } from 'react-helmet-async';
 const education = [
   {
     title: 'Master of Science - M.Sc, Data Science and Artificial Intelligence',
-    institution: 'University of Moratuwa',
-    years: 'Jan 2025 – Dec 2026',
+    institution: 'Dept. of Computer Science, University of Moratuwa',
+    years: '2025 – Present',
     badge: 'Ongoing',
     description:
-      'Postgraduate coursework and research in advanced AI, big data platforms, distributed computing, and cloud systems. Emphasis on statistical modeling, deep learning, and scalable architectures for AI.',
+      'Coursework: Advanced Deep Learning, Advanced AI/ML, Statistical Inference, Data Mining, Bioinformatics, Information Visualization.',
   },
   {
-    title: 'B.Sc. in Biomedical Engineering',
+    title: 'B.Sc. in Biomedical Engineering (Entrepreneurship Minor)',
     institution: 'University of Moratuwa',
-    years: '2018 – 2023',
+    years: 'Oct 2018 – Dec 2023',
     badge: null,
     description:
-      "Focused on biosignal analysis, medical imaging, embedded systems, and biomedical instrumentation. Completed capstone project in signal-based diagnostics. Earned Dean's List recognition for academic excellence.",
+      "2nd Class Upper, CGPA 3.57/4.2. Dean's List in Semesters 4 and 6. Core: Medical Image Processing, Biosignal Processing, Machine Vision, Embedded Systems, Electronic Design.",
   },
   {
-    title: 'School Education',
+    title: 'Primary & Secondary Education',
     institution: "St. Peter's College, Colombo 04",
     years: '2004 – 2017',
     badge: null,
     description:
-      'Completed G.C.E. A/Ls in the Physical Science stream with a strong academic profile and national rank of 319.',
+      'G.C.E. Advanced Level: Z-score 2.083, Island Rank 319, District Rank 98.',
   },
 ];
 
@@ -66,8 +66,9 @@ const academicStrengths = [
       'Pattern Recognition',
       'Machine Intelligence',
       'Statistical Inference',
-      'Big Data Analytics',
-      'Cloud Platforms',
+      'Data Mining',
+      'Bioinformatics',
+      'Info. Visualization',
       'Neural Networks',
     ],
   },

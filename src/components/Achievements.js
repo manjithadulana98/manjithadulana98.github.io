@@ -21,6 +21,7 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import GroupsIcon from '@mui/icons-material/Groups';
 import ArticleIcon from '@mui/icons-material/Article';
 import StarIcon from '@mui/icons-material/Star';
+import VerifiedIcon from '@mui/icons-material/Verified';
 import { Helmet } from 'react-helmet-async';
 
 // Importing local logos
@@ -53,27 +54,33 @@ const publications = [
 
 const achievements = [
   {
-    title: 'Thinkwave 4.0',
+    title: 'IEEE Electronic Design Competition',
     result: 'Runners Up',
-    description: 'Eye screening system development',
+    description: 'Electronic hardware and software integration (2021)',
     icon: '🥈',
   },
   {
-    title: 'Brainwave 2021',
+    title: 'Thinkwave 4.0 Eye Screening',
+    result: 'Runners Up',
+    description: 'Eye screening system development (2022)',
+    icon: '🥈',
+  },
+  {
+    title: 'Brainwave Computational Modelling',
     result: '4th Place',
-    description: 'Tech competition for innovative solutions',
+    description: 'Computational modelling competition (2021)',
     icon: '🏅',
   },
   {
-    title: 'IEEE Electronic Design Competition',
-    result: 'Runners Up',
-    description: 'Electronic hardware and software integration',
-    icon: '🥈',
+    title: "Dean's List",
+    result: 'Semesters 4 & 6',
+    description: 'University of Moratuwa — Academic excellence',
+    icon: '🎓',
   },
   {
     title: 'Maestro 2.0 & 3.0',
     result: 'Semi-Finalist',
-    description: 'Tech hackathon organized by IESL and KDU',
+    description: 'Business case study competition',
     icon: '🏅',
   },
   {
@@ -84,14 +91,25 @@ const achievements = [
   },
 ];
 
+const certifications = [
+  { title: 'Introduction to Medical Software', org: 'Yale University', year: '2024' },
+  { title: 'Fundamentals of Deep Learning', org: 'NVIDIA', year: '2025' },
+  { title: 'Data or Specimens Research Ethics', org: 'CITI Program', year: '2025' },
+  { title: 'AWS Academy Data Engineering and Microservices', org: 'AWS', year: '2025' },
+  { title: 'Machine Learning', org: 'Stanford University, Coursera', year: '' },
+  { title: 'Python for Everybody Specialization', org: 'University of Michigan, Coursera', year: '' },
+];
+
 const volunteering = [
   {
     title: 'IEEE EMBS Moratuwa',
     logo: ieeeEMBSMoratuwaLogo,
     roles: [
-      { role: 'Chairperson – Brainstorm 2023', year: '2023' },
-      { role: 'Vice Chair – Brainstorm 2021', year: '2021' },
-      { role: 'Founder – Medi-Engi Collaboration', year: '2021' },
+      { role: 'Chairman', year: '2022–2023' },
+      { role: 'Vice Chairman', year: '2021–2022' },
+      { role: 'Event Director', year: '2020–2021' },
+      { role: 'Founder – Medi Engi Initiative', year: '2021' },
+      { role: 'Chaired Brainstorm 2023', year: '2023' },
     ],
   },
   {
@@ -373,7 +391,72 @@ const Achievements = () => (
     </Box>
 
     {/* ═══════════════════════════════════════════════════════
-        SECTION 3 — Volunteering & Leadership
+        SECTION 3 — Certifications
+       ═══════════════════════════════════════════════════════ */}
+    <Box
+      sx={{
+        bgcolor: '#f0f4ff',
+        borderRadius: 4,
+        p: { xs: 2, md: 3.5 },
+        mb: 5,
+      }}
+    >
+      <SectionHeader
+        icon={<VerifiedIcon />}
+        title="Certifications"
+        subtitle="Professional development and continuing education"
+      />
+
+      <Stack spacing={1.5}>
+        {certifications.map((cert, idx) => (
+          <Card
+            key={idx}
+            elevation={0}
+            sx={{
+              borderRadius: 2.5,
+              border: '1px solid',
+              borderColor: 'divider',
+              transition: 'all 0.25s',
+              '&:hover': {
+                borderColor: 'primary.light',
+                bgcolor: '#fafbff',
+                boxShadow: 2,
+              },
+            }}
+          >
+            <CardContent
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                py: 1.5,
+                px: 2.5,
+                '&:last-child': { pb: 1.5 },
+              }}
+            >
+              <Box>
+                <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+                  {cert.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {cert.org}
+                </Typography>
+              </Box>
+              {cert.year && (
+                <Chip
+                  label={cert.year}
+                  size="small"
+                  sx={{ fontWeight: 600, fontSize: '0.7rem', height: 22 }}
+                />
+              )}
+            </CardContent>
+          </Card>
+        ))}
+      </Stack>
+    </Box>
+
+    {/* ═══════════════════════════════════════════════════════
+        SECTION 4 — Volunteering & Leadership
        ═══════════════════════════════════════════════════════ */}
     <Box
       sx={{
