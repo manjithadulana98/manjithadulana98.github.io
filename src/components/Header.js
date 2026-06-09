@@ -1,172 +1,108 @@
-import { Box, Typography, Avatar, Tooltip, Stack, Chip } from '@mui/material';
-import { ReactTyped } from 'react-typed';
 import { Helmet } from 'react-helmet-async';
-import EmailIcon from '@mui/icons-material/Email';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { ReactTyped } from 'react-typed';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
-// Icon list
-const techIcons = [
-  { name: 'Python', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-  { name: 'MATLAB', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg' },
-  { name: 'TensorFlow', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
-  { name: 'PyTorch', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
-  { name: 'C++', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
-  { name: 'React', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-  { name: 'Git', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-  { name: 'Arduino', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' },
-  { name: 'LaTeX', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg' }
-];
-
-const socialLinks = [
-  { icon: <EmailIcon sx={{ fontSize: 18 }} />, label: 'Email', href: 'mailto:manjitha456@gmail.com' },
-  { icon: <LinkedInIcon sx={{ fontSize: 18 }} />, label: 'LinkedIn', href: 'https://linkedin.com/in/manjitha-kularatne' },
-  { icon: <GitHubIcon sx={{ fontSize: 18 }} />, label: 'GitHub', href: 'https://github.com/manjithadulana98' },
+const focusAreas = [
+  'AI-Assisted Arrhythmia Validation',
+  'Explainable AI for EEG/ECG',
+  'Clinical-Grade Signal Analytics',
+  'Regulatory-Aligned SaMD Pipelines',
 ];
 
 const Header = () => {
   return (
-    <>
+    <section className="space-y-8 py-8 sm:py-12">
       <Helmet>
         <title>Manjitha Kularatne | Biomedical Engineer & Data Scientist</title>
-        <meta name="description" content="Manjitha Kularatne - Biomedical Engineer, Data Scientist, and AI Researcher specializing in biosignal processing, medical imaging, and AI solutions for healthcare." />
+        <meta
+          name="description"
+          content="Cybernetic portfolio of Manjitha Kularatne, Biomedical Research Engineer and Data Scientist specializing in explainable clinical AI and biosignal systems."
+        />
         <link rel="canonical" href="https://manjithadulana98.github.io/" />
       </Helmet>
-    <Box
-      sx={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        padding: { xs: '2rem 1.5rem', md: '3rem' },
-        boxSizing: 'border-box',
-        maxWidth: '800px',
-        mx: 'auto',
-      }}
-    >
-      {/* Profile Section */}
-      <Avatar
-        alt="Manjitha Kularatne"
-        src="/profile.jpg"
-        sx={{
-          width: { xs: 160, md: 200 },
-          height: { xs: 160, md: 200 },
-          boxShadow: '0 8px 32px rgba(63, 81, 181, 0.18)',
-          border: '4px solid #fff',
-          mb: 3,
-        }}
-      />
 
-      <Typography
-        variant="h3"
-        sx={{
-          fontWeight: 800,
-          fontSize: { xs: '1.8rem', md: '2.6rem' },
-          mb: 1,
-        }}
-      >
-        Manjitha Kularatne
-      </Typography>
+      <div className="glass-panel relative overflow-hidden p-6 sm:p-10">
+        <div className="absolute -right-24 top-0 h-56 w-56 rounded-full bg-cyan-400/20 blur-3xl" />
+        <div className="absolute -left-28 bottom-0 h-56 w-56 rounded-full bg-teal-400/20 blur-3xl" />
 
-      <Typography
-        variant="h5"
-        color="primary.main"
-        sx={{
-          fontWeight: 500,
-          fontSize: { xs: '1.1rem', md: '1.4rem' },
-          mb: 2,
-          minHeight: '2rem',
-        }}
-      >
-        <ReactTyped
-          strings={[
-            'Biomedical Research Engineer',
-            'AI for Healthcare',
-            'ECG & Biosignal Processing',
-            'Medical Image Analysis',
-            'Regulatory & Clinical Validation',
-            'Data Science & AI',
-          ]}
-          typeSpeed={50}
-          backSpeed={30}
-          loop
-        />
-      </Typography>
+        <div className="relative z-10 grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+          <div className="space-y-5">
+            <p className="chip">Biomedical AI Systems | Sri Lanka</p>
+            <h1 className="font-cyber text-3xl leading-tight text-cyan-100 sm:text-5xl">
+              Manjitha Kularatne
+            </h1>
+            <p className="text-base text-cyan-200/90 sm:text-xl">
+              <ReactTyped
+                strings={[
+                  'Research Biomedical Engineer',
+                  'Clinical AI Validation Specialist',
+                  'Data Scientist for Healthcare Signals',
+                  'Explainable AI (XAI) Practitioner',
+                ]}
+                typeSpeed={45}
+                backSpeed={26}
+                loop
+              />
+            </p>
+            <p className="max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
+              I bridge biomedical engineering and artificial intelligence to design clinically dependable
+              systems for ECG and EEG signal interpretation. My work focuses on explainable AI (XAI),
+              physiological time-series intelligence, and regulatory-grade validation workflows that align
+              model behavior with physician trust, risk controls, and real-world deployment requirements.
+            </p>
 
-      <Typography
-        variant="body1"
-        color="text.secondary"
-        sx={{
-          maxWidth: 560,
-          lineHeight: 1.75,
-          mb: 3,
-          fontSize: { xs: '0.9rem', md: '1rem' },
-        }}
-      >
-        Biomedical Research Engineer pursuing an M.Sc. in Data Science & AI
-        at the University of Moratuwa. I build and validate AI-assisted
-        healthcare solutions — from ECG arrhythmia detection to medical image
-        analysis — combining applied Machine Learning, statistics, data analysis,automation and FDA compliance
-         (FDA 510(k), ISO 13485, ISO 14971).
-      </Typography>
+            <div className="flex flex-wrap gap-2">
+              {focusAreas.map((item) => (
+                <span key={item} className="chip">
+                  {item}
+                </span>
+              ))}
+            </div>
 
-      {/* Social Chips */}
-      <Stack direction="row" spacing={1} sx={{ mb: 5 }}>
-        {socialLinks.map((s) => (
-          <Chip
-            key={s.label}
-            icon={s.icon}
-            label={s.label}
-            component="a"
-            href={s.href}
-            target={s.label !== 'Email' ? '_blank' : undefined}
-            rel="noopener noreferrer"
-            clickable
-            variant="outlined"
-            sx={{
-              fontWeight: 500,
-              borderColor: 'divider',
-              '&:hover': { borderColor: 'primary.main', bgcolor: '#f0f4ff' },
-            }}
-          />
-        ))}
-      </Stack>
+            <div className="flex flex-wrap gap-3 pt-2">
+              <a
+                href="mailto:manjitha456@gmail.com"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-300/50 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-100 transition hover:bg-cyan-300/20"
+              >
+                <MdEmail /> Email
+              </a>
+              <a
+                href="https://linkedin.com/in/manjitha-kularatne"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 px-4 py-2 text-sm text-slate-200 transition hover:border-cyan-300/50 hover:text-cyan-100"
+              >
+                <FaLinkedinIn /> LinkedIn
+              </a>
+              <a
+                href="https://github.com/manjithadulana98"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 px-4 py-2 text-sm text-slate-200 transition hover:border-cyan-300/50 hover:text-cyan-100"
+              >
+                <FaGithub /> GitHub
+              </a>
+            </div>
+          </div>
 
-      {/* Tech Icon Grid */}
-      <Box
-        sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'center',
-          gap: { xs: 2, md: 3 },
-          maxWidth: 700,
-        }}
-      >
-        {techIcons.map((icon) => (
-          <Tooltip key={icon.name} title={icon.name} arrow>
-            <Box
-              component="img"
-              src={icon.src}
-              alt={icon.name}
-              sx={{
-                width: { xs: 40, md: 52 },
-                height: { xs: 40, md: 52 },
-                objectFit: 'contain',
-                opacity: 0.45,
-                transition: 'transform 0.3s, opacity 0.3s',
-                '&:hover': {
-                  transform: 'scale(1.3)',
-                  opacity: 1,
-                },
-              }}
-            />
-          </Tooltip>
-        ))}
-      </Box>
-    </Box>
-    </>
+          <div className="rounded-2xl border border-cyan-300/30 bg-slate-900/75 p-6 shadow-[0_0_32px_rgba(56,189,248,0.15)]">
+            <h2 className="font-cyber text-lg text-cyan-200">System Snapshot</h2>
+            <div className="mt-4 space-y-3 text-sm text-slate-300">
+              <p className="rounded-xl border border-cyan-300/20 bg-slate-950/80 p-3">
+                M.Sc. Data Science and AI candidate, University of Moratuwa.
+              </p>
+              <p className="rounded-xl border border-cyan-300/20 bg-slate-950/80 p-3">
+                Biomedical Research Engineer at Synergen Technology Labs.
+              </p>
+              <p className="rounded-xl border border-cyan-300/20 bg-slate-950/80 p-3">
+                Focus: ventricular arrhythmia detection, reliability metrics, and interpretable model diagnostics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

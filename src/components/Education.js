@@ -1,284 +1,55 @@
-import {
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineDot,
-  TimelineConnector,
-  TimelineContent,
-  TimelineOppositeContent,
-} from '@mui/lab';
-import {
-  Typography,
-  Box,
-  Chip,
-  Stack,
-  Avatar,
-  Card,
-  CardContent,
-  Grid,
-} from '@mui/material';
-import SchoolIcon from '@mui/icons-material/School';
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import { Helmet } from 'react-helmet-async';
 
 const education = [
   {
-    title: 'Master of Science - M.Sc, Data Science and Artificial Intelligence',
-    institution: 'Dept. of Computer Science, University of Moratuwa',
-    years: '2025 – Present',
-    badge: 'Ongoing',
-    description:
-      'Coursework: Advanced Deep Learning, Advanced AI/ML, Statistical Inference, Data Mining, Bioinformatics, Information Visualization.',
+    title: 'M.Sc. in Data Science and Artificial Intelligence',
+    institution: 'University of Moratuwa',
+    years: '2025 - Present',
+    note: 'Focus on advanced machine learning, deep learning, statistical inference, and explainable analytics for EEG attention decoding.',
   },
   {
     title: 'B.Sc. in Biomedical Engineering (Entrepreneurship Minor)',
     institution: 'University of Moratuwa',
-    years: 'Oct 2018 – Dec 2023',
-    badge: null,
-    description:
-      "2nd Class Upper, CGPA 3.57/4.2. Dean's List in Semesters 4 and 6. Core: Medical Image Processing, Biosignal Processing, Machine Vision, Embedded Systems, Electronic Design.",
+    years: '2018 - 2023',
+    note: "Second Class Upper Division, CGPA 3.57/4.2. Core grounding in biosignal processing, medical imaging, embedded systems, and biomedical instrumentation.",
   },
   {
-    title: 'Primary & Secondary Education',
-    institution: "St. Peter's College, Colombo 04",
-    years: '2004 – 2017',
-    badge: null,
-    description:
-      'G.C.E. Advanced Level: Z-score 2.083, Island Rank 319, District Rank 98.',
-  },
-];
-
-const academicStrengths = [
-  {
-    label: 'Biomedical Engineering & Signal Processing',
-    skills: [
-      'Biosignal Processing',
-      'Medical Imaging',
-      'Medical Instrumentation',
-      'Anatomy & Physiology',
-      'Digital Signal Processing',
-    ],
-  },
-  {
-    label: 'Artificial Intelligence & Data Science',
-    skills: [
-      'Advanced AI',
-      'Pattern Recognition',
-      'Machine Intelligence',
-      'Statistical Inference',
-      'Data Mining',
-      'Bioinformatics',
-      'Info. Visualization',
-      'Neural Networks',
-    ],
-  },
-  {
-    label: 'Electronics & Embedded Systems',
-    skills: [
-      'Embedded Systems',
-      'IoT',
-      'Robotics',
-      'Control Systems',
-      'Circuit Design',
-    ],
-  },
-  {
-    label: 'Mathematics & Computational Foundations',
-    skills: [
-      'Linear Algebra',
-      'Calculus',
-      'Time Series Analysis',
-      'Differential Equations',
-      'Applied Statistics',
-    ],
-  },
-  {
-    label: 'Business & Innovation',
-    skills: [
-      'Entrepreneurship',
-      'Financial Accounting',
-      'Engineering Economics',
-      'Business Plan Development',
-    ],
+    title: 'G.C.E Advanced Level',
+    institution: "St. Peter's College, Colombo",
+    years: '2004 - 2017',
+    note: 'Z-score 2.083, Island Rank 319, District Rank 98.',
   },
 ];
 
 const Education = () => (
-  <>
+  <section className="space-y-6 py-6 sm:py-10">
     <Helmet>
       <title>Education | Manjitha Kularatne</title>
-      <meta name="description" content="Academic background of Manjitha Kularatne - M.Sc in Data Science & AI at University of Moratuwa, B.Sc in Biomedical Engineering. Education timeline and coursework." />
+      <meta
+        name="description"
+        content="Academic journey in biomedical engineering and data science, including current postgraduate AI studies."
+      />
       <link rel="canonical" href="https://manjithadulana98.github.io/education" />
     </Helmet>
-  <Box
-    sx={{
-      padding: { xs: '1.5rem', md: '3rem' },
-      maxWidth: '1000px',
-      margin: 'auto',
-    }}
-  >
-    {/* Page Title */}
-    <Typography
-      variant="h4"
-      sx={{ fontWeight: 800, mb: 1, textAlign: 'center' }}
-    >
-      Education
-    </Typography>
-    <Typography
-      variant="body1"
-      color="text.secondary"
-      sx={{ textAlign: 'center', mb: 5, maxWidth: 520, mx: 'auto' }}
-    >
-      Academic background and key areas of expertise
-    </Typography>
 
-    {/* ── Education Timeline ── */}
-    <Box
-      sx={{
-        bgcolor: '#f0f4ff',
-        borderRadius: 4,
-        p: { xs: 2, md: 3.5 },
-        mb: 5,
-      }}
-    >
-      <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 3 }}>
-        <Avatar sx={{ bgcolor: 'primary.main', width: 40, height: 40 }}>
-          <SchoolIcon />
-        </Avatar>
-        <Typography variant="h5" sx={{ fontWeight: 700 }}>
-          Academic Journey
-        </Typography>
-      </Stack>
+    <div>
+      <h2 className="section-title">Education</h2>
+      <p className="section-subtitle">Training at the intersection of engineering medicine and intelligent systems.</p>
+    </div>
 
-      <Timeline
-        position="alternate"
-        sx={{
-          p: 0,
-          '& .MuiTimelineOppositeContent-root': {
-            flex: { xs: 0.3, md: 0.4 },
-          },
-        }}
-      >
-        {education.map((edu, idx) => (
-          <TimelineItem key={idx}>
-            <TimelineOppositeContent
-              color="text.secondary"
-              sx={{ fontSize: '0.85rem', pt: 2 }}
-            >
-              {edu.years}
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot
-                sx={{
-                  bgcolor: 'primary.main',
-                  boxShadow: '0 0 0 4px #e3eafc',
-                }}
-              />
-              {idx < education.length - 1 && (
-                <TimelineConnector sx={{ bgcolor: 'primary.light' }} />
-              )}
-            </TimelineSeparator>
-            <TimelineContent sx={{ pb: 4 }}>
-              <Card
-                elevation={0}
-                sx={{
-                  borderRadius: 2.5,
-                  border: '1px solid',
-                  borderColor: 'divider',
-                  bgcolor: '#ffffff',
-                  transition: 'all 0.25s',
-                  '&:hover': {
-                    borderColor: 'primary.light',
-                    boxShadow: 3,
-                  },
-                }}
-              >
-                <CardContent sx={{ p: 2.5, '&:last-child': { pb: 2.5 } }}>
-                  {edu.badge && (
-                    <Chip
-                      label={edu.badge}
-                      color="primary"
-                      size="small"
-                      sx={{ fontWeight: 600, mb: 1, fontSize: '0.7rem', height: 22 }}
-                    />
-                  )}
-                  <Typography variant="subtitle1" sx={{ fontWeight: 700, lineHeight: 1.4 }}>
-                    {edu.title}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="primary.main"
-                    sx={{ fontWeight: 600, mb: 1 }}
-                  >
-                    {edu.institution}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" sx={{ lineHeight: 1.7 }}>
-                    {edu.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
-    </Box>
-
-    {/* ── Key Academic Strengths ── */}
-    <Box sx={{ bgcolor: '#f7f7f7', borderRadius: 4, p: { xs: 2, md: 3.5 } }}>
-      <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 3 }}>
-        <Avatar sx={{ bgcolor: 'primary.main', width: 40, height: 40 }}>
-          <AutoStoriesIcon />
-        </Avatar>
-        <Typography variant="h5" sx={{ fontWeight: 700 }}>
-          Key Academic Strengths
-        </Typography>
-      </Stack>
-
-      <Grid container spacing={2}>
-        {academicStrengths.map((area, idx) => (
-          <Grid item xs={12} sm={6} key={idx}>
-            <Card
-              elevation={0}
-              sx={{
-                height: '100%',
-                borderRadius: 2.5,
-                border: '1px solid',
-                borderColor: 'divider',
-                bgcolor: '#ffffff',
-                transition: 'all 0.25s',
-                '&:hover': { borderColor: 'primary.light', boxShadow: 2 },
-              }}
-            >
-              <CardContent sx={{ p: 2 }}>
-                <Typography
-                  variant="subtitle2"
-                  sx={{ fontWeight: 700, color: 'primary.main', mb: 1 }}
-                >
-                  {area.label}
-                </Typography>
-                <Stack direction="row" flexWrap="wrap" useFlexGap spacing={0.75}>
-                  {area.skills.map((skill, i) => (
-                    <Chip
-                      key={i}
-                      label={skill}
-                      size="small"
-                      variant="outlined"
-                      sx={{
-                        fontSize: '0.72rem',
-                        borderRadius: 2,
-                        borderColor: '#d0d7de',
-                      }}
-                    />
-                  ))}
-                </Stack>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-  </Box>
-  </>
+    <div className="space-y-4">
+      {education.map((item) => (
+        <article key={item.title} className="glass-panel p-5 sm:p-6">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h3 className="font-cyber text-base text-cyan-100 sm:text-lg">{item.title}</h3>
+            <span className="chip">{item.years}</span>
+          </div>
+          <p className="mt-1 text-sm font-medium text-teal-200">{item.institution}</p>
+          <p className="mt-3 text-sm leading-relaxed text-slate-300">{item.note}</p>
+        </article>
+      ))}
+    </div>
+  </section>
 );
 
 export default Education;

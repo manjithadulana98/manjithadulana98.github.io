@@ -1,192 +1,79 @@
-import {
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineDot,
-  TimelineConnector,
-  TimelineContent,
-  TimelineOppositeContent
-} from '@mui/lab';
-import {
-  Typography,
-  Box,
-  Card,
-  CardContent,
-  Chip,
-  Stack,
-  Avatar,
-} from '@mui/material';
-import WorkIcon from '@mui/icons-material/Work';
 import { Helmet } from 'react-helmet-async';
 
 const experiences = [
   {
     role: 'Biomedical Research Engineer',
-    company: 'Synergen Technology Labs (Pvt) Ltd',
-    duration: 'Jul 2023 – Present',
-    location: 'Sri Lanka · On-site',
-    description: `Developed and validated AI-assisted ECG systems for arrhythmia detection and designed clinical protocols assessing inter-rater variability and reliability.
-Conducted DFMEA to mitigate software failure modes and ensured alignment with ISO 14971 and ISO 13485.
-Authored validation protocols, clinical summaries, and traceability documents for FDA 510(k) submissions.
-Translated complex clinical datasets into statistical reports and visualizations driving design reviews.`,
-    skills: ['ECG Analysis', 'FDA 510(k)', 'ISO 14971', 'DFMEA', 'Python', 'MATLAB', 'Statistical Modeling']
+    company: 'Synergen Technology Labs',
+    duration: 'Jul 2023 - Present',
+    location: 'Sri Lanka',
+    highlights: [
+      'Develop and validate AI-assisted ECG systems for arrhythmia detection and clinical reliability analysis.',
+      'Perform inter-rater variability studies, statistical reporting, and protocol design for regulated evidence packages.',
+      'Contribute to DFMEA and traceability artifacts aligned with FDA 510(k), ISO 14971, and ISO 13485.',
+    ],
+    stack: ['ECG Analytics', 'Clinical Validation', 'Python', 'Risk Documentation'],
   },
   {
     role: 'Trainee R&D Biomedical Engineer',
-    company: 'Effective Solutions (Pvt) Ltd — Jendo Health',
-    duration: 'Sep 2020 – Aug 2021',
+    company: 'Effective Solutions - Jendo Health',
+    duration: 'Sep 2020 - Aug 2021',
     location: 'Sri Lanka',
-    description: `Architected signal-processing workflows for the Jendo cardiac monitoring device and benchmarked ECG outputs across MATLAB and embedded firmware environments.
-Designed device–app communication protocol and performed validation testing on medical-grade firmware and companion mobile app.`,
-    skills: ['Biosignal Processing', 'Embedded Systems', 'MATLAB', 'Firmware Validation']
-  }
+    highlights: [
+      'Built PPG/ECG signal processing workflows for wearable cardiac monitoring products.',
+      'Benchmarked firmware and MATLAB outputs to support verification and calibration consistency.',
+      'Supported communication protocol and product-level integration testing with mobile applications.',
+    ],
+    stack: ['Signal Processing', 'Embedded Validation', 'MATLAB', 'Device QA'],
+  },
 ];
 
 const Experience = () => (
-  <>
+  <section className="space-y-6 py-6 sm:py-10">
     <Helmet>
       <title>Experience | Manjitha Kularatne</title>
-      <meta name="description" content="Professional experience of Manjitha Kularatne - Research Engineer at Synergen Technology Labs, working on ECG processing, AI systems, and healthcare solutions." />
+      <meta
+        name="description"
+        content="Professional experience building biomedical AI and clinically validated signal processing solutions."
+      />
       <link rel="canonical" href="https://manjithadulana98.github.io/experience" />
     </Helmet>
-  <Box
-    sx={{
-      padding: { xs: '1.5rem', md: '3rem' },
-      maxWidth: '1000px',
-      margin: 'auto',
-    }}
-  >
-    {/* Page Title */}
-    <Typography
-      variant="h4"
-      sx={{ fontWeight: 800, mb: 1, textAlign: 'center' }}
-    >
-      Work Experience
-    </Typography>
-    <Typography
-      variant="body1"
-      color="text.secondary"
-      sx={{ textAlign: 'center', mb: 5, maxWidth: 520, mx: 'auto' }}
-    >
-      Professional roles in biomedical engineering and AI research
-    </Typography>
 
-    <Box
-      sx={{
-        bgcolor: '#f0f4ff',
-        borderRadius: 4,
-        p: { xs: 2, md: 3.5 },
-      }}
-    >
-      <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 3 }}>
-        <Avatar sx={{ bgcolor: 'primary.main', width: 40, height: 40 }}>
-          <WorkIcon />
-        </Avatar>
-        <Typography variant="h5" sx={{ fontWeight: 700 }}>
-          Career Timeline
-        </Typography>
-      </Stack>
+    <div>
+      <h2 className="section-title">Experience</h2>
+      <p className="section-subtitle">Clinical AI engineering, biosignal systems, and regulated development practices.</p>
+    </div>
 
-      <Timeline
-        position="alternate"
-        sx={{
-          p: 0,
-          '& .MuiTimelineOppositeContent-root': {
-            flex: { xs: 0.3, md: 0.4 },
-          },
-        }}
-      >
-        {experiences.map((exp, idx) => (
-          <TimelineItem key={idx}>
-            <TimelineOppositeContent
-              color="text.secondary"
-              sx={{ fontSize: '0.85rem', pt: 2 }}
-            >
-              {exp.duration}
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot
-                sx={{
-                  bgcolor: 'primary.main',
-                  boxShadow: '0 0 0 4px #e3eafc',
-                }}
-              />
-              {idx !== experiences.length - 1 && (
-                <TimelineConnector sx={{ bgcolor: 'primary.light' }} />
-              )}
-            </TimelineSeparator>
-            <TimelineContent sx={{ pb: 4 }}>
-              <Card
-                elevation={0}
-                sx={{
-                  borderRadius: 2.5,
-                  border: '1px solid',
-                  borderColor: 'divider',
-                  bgcolor: '#ffffff',
-                  transition: 'all 0.25s',
-                  '&:hover': {
-                    borderColor: 'primary.light',
-                    boxShadow: 3,
-                  },
-                }}
-              >
-                <CardContent sx={{ p: 2.5, '&:last-child': { pb: 2.5 } }}>
-                  <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>
-                    {exp.role}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="primary.main"
-                    sx={{ fontWeight: 600, mb: 0.5 }}
-                  >
-                    {exp.company}
-                  </Typography>
-                  <Typography
-                    variant="caption"
-                    color="text.secondary"
-                    sx={{ display: 'block', mb: 1.5 }}
-                  >
-                    {exp.location}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ lineHeight: 1.7, mb: 2, whiteSpace: 'pre-line' }}
-                  >
-                    {exp.description}
-                  </Typography>
-                  {exp.skills && (
-                    <Stack
-                      direction="row"
-                      flexWrap="wrap"
-                      useFlexGap
-                      spacing={0.75}
-                    >
-                      {exp.skills.map((skill, i) => (
-                        <Chip
-                          key={i}
-                          label={skill}
-                          size="small"
-                          variant="outlined"
-                          sx={{
-                            fontSize: '0.72rem',
-                            borderRadius: 2,
-                            borderColor: 'primary.light',
-                            color: 'primary.dark',
-                          }}
-                        />
-                      ))}
-                    </Stack>
-                  )}
-                </CardContent>
-              </Card>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
-    </Box>
-  </Box>
-  </>
+    <div className="space-y-4">
+      {experiences.map((item) => (
+        <article key={item.role} className="glass-panel p-5 sm:p-6">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h3 className="font-cyber text-base text-cyan-100 sm:text-lg">{item.role}</h3>
+              <p className="text-sm font-medium text-teal-200">{item.company}</p>
+              <p className="mt-1 text-xs text-slate-400">{item.location}</p>
+            </div>
+            <span className="chip">{item.duration}</span>
+          </div>
+
+          <ul className="mt-4 space-y-2 text-sm text-slate-300">
+            {item.highlights.map((point) => (
+              <li key={point} className="rounded-lg border border-cyan-300/15 bg-slate-950/60 p-3">
+                {point}
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            {item.stack.map((tag) => (
+              <span key={tag} className="chip">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
 );
 
 export default Experience;

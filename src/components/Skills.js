@@ -1,161 +1,119 @@
-import {
-  Box,
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  CardMedia,
-  Stack,
-  Avatar,
-} from '@mui/material';
-import BuildIcon from '@mui/icons-material/Build';
 import { Helmet } from 'react-helmet-async';
+import { useEffect, useRef, useState } from 'react';
 
-const skills = [
+const skillGroups = [
   {
-    title: 'Biomedical & Regulatory',
-    list: [
-      { name: 'ECG Analysis', icon: 'https://cdn-icons-png.flaticon.com/512/2966/2966327.png' },
-      { name: 'Biosignal Processing', icon: 'https://cdn-icons-png.flaticon.com/512/3655/3655580.png' },
-      { name: 'Medical Imaging', icon: 'https://cdn-icons-png.flaticon.com/512/2920/2920349.png' },
-      { name: 'Clinical Data Analysis', icon: 'https://cdn-icons-png.flaticon.com/512/3771/3771435.png' },
-      { name: 'FDA 510(k) / SaMD', icon: 'https://cdn-icons-png.flaticon.com/512/3145/3145765.png' },
-      { name: 'ISO 14971 / 13485', icon: 'https://cdn-icons-png.flaticon.com/512/1040/1040230.png' },
-      { name: 'IEC 62304 / DFMEA', icon: 'https://cdn-icons-png.flaticon.com/512/1040/1040214.png' },
-      { name: 'Clinical Protocol / GCP', icon: 'https://cdn-icons-png.flaticon.com/512/5358/5358780.png' },
+    title: 'Algorithm Development',
+    subtitle: 'TensorFlow, PyTorch',
+    items: [
+      { name: 'TensorFlow', score: 88 },
+      { name: 'PyTorch', score: 84 },
+      { name: 'Feature Engineering', score: 90 },
+      { name: 'Signal Classification Pipelines', score: 87 },
     ],
   },
   {
-    title: 'ML / AI & Tools',
-    list: [
-      { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
-      { name: 'MATLAB / Simulink', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg' },
-      { name: 'C++', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
-      { name: 'TensorFlow', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
-      { name: 'PyTorch', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
-      { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-      { name: 'Power BI', icon: 'https://img.icons8.com/color/48/power-bi.png' },
-      { name: 'LaTeX', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg' },
-      { name: 'SolidWorks', icon: 'https://cdn-icons-png.flaticon.com/512/2920/2920349.png' },
-      { name: 'EasyEDA', icon: 'https://cdn-icons-png.flaticon.com/512/1040/1040230.png' },
+    title: 'Medical Standards',
+    subtitle: 'ISO 14971, IEC 62304',
+    items: [
+      { name: 'ISO 14971 Risk Management', score: 89 },
+      { name: 'IEC 62304 Lifecycle', score: 83 },
+      { name: 'FDA 510(k) Validation Traceability', score: 84 },
+      { name: 'Clinical Reliability Reporting', score: 91 },
     ],
   },
   {
-    title: 'Soft Skills',
-    list: [
-      { name: 'Teamwork', icon: 'https://cdn-icons-png.flaticon.com/512/3771/3771435.png' },
-      { name: 'Technical Writing', icon: 'https://cdn-icons-png.flaticon.com/512/3145/3145765.png' },
-      { name: 'Problem-Solving', icon: 'https://cdn-icons-png.flaticon.com/512/1040/1040230.png' },
-      { name: 'Presentation', icon: 'https://cdn-icons-png.flaticon.com/512/1685/1685369.png' },
-      { name: 'Leadership', icon: 'https://cdn-icons-png.flaticon.com/512/1040/1040214.png' },
-      { name: 'Time Management', icon: 'https://cdn-icons-png.flaticon.com/512/5358/5358780.png' },
+    title: 'Data Engineering & Cloud',
+    subtitle: 'GCP, Docker, Python',
+    items: [
+      { name: 'Python & Scientific Stack', score: 94 },
+      { name: 'GCP Data Workflows', score: 76 },
+      { name: 'Dockerized Experiment Environments', score: 72 },
+      { name: 'Data Integrity Tooling', score: 86 },
+    ],
+  },
+  {
+    title: 'Research & Analytics',
+    subtitle: 'EEG/ECG, Statistical Inference',
+    items: [
+      { name: 'EEG Auditory Attention Decoding', score: 79 },
+      { name: 'ECG Arrhythmia Investigation', score: 93 },
+      { name: 'Inter-rater Variability Analysis', score: 88 },
+      { name: 'XAI-driven Error Analysis', score: 82 },
     ],
   },
 ];
 
-const Skills = () => (
-  <>
-    <Helmet>
-      <title>Skills | Manjitha Kularatne</title>
-      <meta name="description" content="Technical skills of Manjitha Kularatne - Python, JavaScript, MATLAB, React, Machine Learning, Deep Learning, biosignal processing, and more." />
-      <link rel="canonical" href="https://manjithadulana98.github.io/skills" />
-    </Helmet>
-  <Box
-    sx={{
-      padding: { xs: '1.5rem', md: '3rem' },
-      maxWidth: '1000px',
-      margin: 'auto',
-    }}
-  >
-    {/* Page Title */}
-    <Typography
-      variant="h4"
-      sx={{ fontWeight: 800, mb: 1, textAlign: 'center' }}
-    >
-      Skills
-    </Typography>
-    <Typography
-      variant="body1"
-      color="text.secondary"
-      sx={{ textAlign: 'center', mb: 5, maxWidth: 520, mx: 'auto' }}
-    >
-      Technical proficiencies, industry tools, and interpersonal strengths
-    </Typography>
-
-    <Box sx={{ bgcolor: '#f7f7f7', borderRadius: 4, p: { xs: 2, md: 3.5 } }}>
-      <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 3 }}>
-        <Avatar sx={{ bgcolor: 'primary.main', width: 40, height: 40 }}>
-          <BuildIcon />
-        </Avatar>
-        <Typography variant="h5" sx={{ fontWeight: 700 }}>
-          Skill Set
-        </Typography>
-      </Stack>
-
-      <Grid container spacing={3}>
-        {skills.map((category, idx) => (
-          <Grid item xs={12} sm={6} md={4} key={idx}>
-            <Card
-              elevation={0}
-              sx={{
-                height: '100%',
-                borderRadius: 2.5,
-                border: '1px solid',
-                borderColor: 'divider',
-                bgcolor: '#ffffff',
-                transition: 'all 0.25s',
-                '&:hover': { borderColor: 'primary.light', boxShadow: 2 },
-              }}
-            >
-              <CardContent sx={{ p: 2.5 }}>
-                <Typography
-                  variant="subtitle1"
-                  sx={{ fontWeight: 700, mb: 2, color: 'primary.main' }}
-                >
-                  {category.title}
-                </Typography>
-                <Grid container spacing={1.5}>
-                  {category.list.map((skill, i) => (
-                    <Grid
-                      item
-                      xs={6}
-                      key={i}
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 1,
-                      }}
-                    >
-                      {skill.icon && (
-                        <CardMedia
-                          component="img"
-                          image={skill.icon}
-                          alt={skill.name}
-                          sx={{
-                            width: 22,
-                            height: 22,
-                            objectFit: 'contain',
-                            flexShrink: 0,
-                          }}
-                        />
-                      )}
-                      <Typography
-                        variant="body2"
-                        sx={{ fontSize: '0.8rem', lineHeight: 1.3 }}
-                      >
-                        {skill.name}
-                      </Typography>
-                    </Grid>
-                  ))}
-                </Grid>
-              </CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-  </Box>
-  </>
+const SkillMeter = ({ name, score, active }) => (
+  <div className="space-y-2">
+    <div className="flex items-center justify-between text-xs text-slate-300 sm:text-sm">
+      <span>{name}</span>
+      <span className="font-medium text-cyan-200">{score}%</span>
+    </div>
+    <div className="h-2.5 rounded-full bg-slate-800">
+      <div
+        className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-teal-300 shadow-[0_0_14px_rgba(45,212,191,0.55)] transition-all duration-1000"
+        style={{ width: active ? `${score}%` : '0%' }}
+      />
+    </div>
+  </div>
 );
+
+const Skills = () => {
+  const sectionRef = useRef(null);
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActive(true);
+        }
+      },
+      { threshold: 0.24 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section ref={sectionRef} className="space-y-6 py-6 sm:py-10">
+      <Helmet>
+        <title>Skills | Manjitha Kularatne</title>
+        <meta
+          name="description"
+          content="Interactive skill matrix for biomedical AI, regulatory standards, cloud engineering, and clinical analytics."
+        />
+        <link rel="canonical" href="https://manjithadulana98.github.io/skills" />
+      </Helmet>
+
+      <div>
+        <h2 className="section-title">Skill Matrix</h2>
+        <p className="section-subtitle">
+          Dynamic competencies across model development, safety standards, cloud tooling, and
+          clinical research analytics.
+        </p>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {skillGroups.map((group) => (
+          <article key={group.title} className="glass-panel p-5 sm:p-6">
+            <h3 className="font-cyber text-base text-cyan-100 sm:text-lg">{group.title}</h3>
+            <p className="mt-1 text-sm text-teal-200/90">{group.subtitle}</p>
+            <div className="mt-5 space-y-4">
+              {group.items.map((item) => (
+                <SkillMeter key={item.name} name={item.name} score={item.score} active={active} />
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Skills;
