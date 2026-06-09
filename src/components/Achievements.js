@@ -7,7 +7,7 @@ const keyItems = [
   {
     title: 'Conjunctival and Retinal Dataset Contribution',
     detail:
-      'Published IEEE DataPort contribution supporting diabetes-related vascular imaging and automated analysis research.',
+      'Published IEEE DataPort contribution supporting diabetes-related vascular imaging, biomarker exploration, and automated screening research.',
     tag: 'IEEE DataPort',
   },
   {
@@ -17,7 +17,7 @@ const keyItems = [
   },
   {
     title: 'Thinkwave 4.0 Eye Screening',
-    detail: 'Runners-up achievement for intelligent eye screening innovation challenge.',
+    detail: 'Runners-up achievement for intelligent ophthalmic screening innovation challenge.',
     tag: 'Innovation',
   },
 ];
@@ -41,7 +41,7 @@ const Achievements = () => (
 
     <div>
       <h2 className="section-title">Highlights & Contributions</h2>
-      <p className="section-subtitle">Key research outcomes, technical competitions, and global engineering community leadership.</p>
+      <p className="section-subtitle">Key biomedical AI outcomes, research artifacts, and engineering community leadership.</p>
     </div>
 
     <div className="grid gap-4 lg:grid-cols-3">

@@ -4,8 +4,8 @@ const researchProjects = [
   {
     title: 'Auditory Attention Decoding for Hearing Aids',
     summary:
-      'Investigating EEG-based selective attention decoding with explainability overlays for trustworthy hearing-assistive intelligence.',
-    tags: ['EEG', 'XAI', 'Deep Learning', 'Neural Decoding'],
+      'Investigating EEG-based selective attention decoding with interpretable attention-maps and channel-level attribution for trustworthy hearing-assistive intelligence.',
+    tags: ['EEG', 'XAI', 'Auditory Neuroscience', 'Neural Decoding'],
     demo: '#',
     paper: '#',
     status: 'In Progress',
@@ -13,8 +13,8 @@ const researchProjects = [
   {
     title: 'Ventricular Tachycardia Detection Algorithms',
     summary:
-      'Designing sensitivity-focused detection and adjudication workflows for ventricular arrhythmia episodes in AI-assisted ECG systems.',
-    tags: ['ECG', 'Clinical Validation', 'Arrhythmia AI', 'Time-Series'],
+      'Designing sensitivity-focused detection and adjudication workflows for ventricular arrhythmia episodes in AI-assisted ECG systems with reliability tracking and reviewer agreement analytics.',
+    tags: ['ECG', 'Clinical Validation', 'Arrhythmia AI', 'Inter-rater Reliability'],
     demo: '#',
     paper: '#',
     status: 'Clinical Validation',
@@ -22,10 +22,10 @@ const researchProjects = [
   {
     title: 'Retinal-Scleral Biomarker Intelligence',
     summary:
-      'Computer vision pipeline for vascular biomarker extraction and diabetic risk profiling from ocular image modalities.',
-    tags: ['Medical Imaging', 'Feature Extraction', 'Python', 'Research'],
+      'Computer vision pipeline for vascular biomarker extraction and diabetic risk profiling from conjunctival and retinal image modalities.',
+    tags: ['Medical Imaging', 'Vascular Biomarkers', 'Python', 'Dataset Engineering'],
     demo: 'https://github.com/manjithadulana98/fundus-hybrid-segmentation',
-    paper: '#',
+    paper: 'https://ieee-dataport.org/documents/conjunctival-and-retinal-images-healthy-subjects-and-subjects-diabetes',
     status: 'Published Dataset',
   },
 ];
@@ -53,7 +53,7 @@ const Projects = () => (
     <div>
       <h2 className="section-title">Research Portfolio</h2>
       <p className="section-subtitle">
-        Active deep-tech projects translating biosignals, explainable AI, and clinical evidence into deployable healthcare systems.
+        Active deep-tech projects in cardiology AI, neuroengineering, and medical imaging for clinically credible healthcare systems.
       </p>
     </div>
 

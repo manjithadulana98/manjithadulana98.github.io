@@ -8,10 +8,10 @@ const experiences = [
     location: 'Sri Lanka',
     highlights: [
       'Develop and validate AI-assisted ECG systems for arrhythmia detection and clinical reliability analysis.',
-      'Perform inter-rater variability studies, statistical reporting, and protocol design for regulated evidence packages.',
-      'Contribute to DFMEA and traceability artifacts aligned with FDA 510(k), ISO 14971, and ISO 13485.',
+      'Perform inter-rater variability studies, episode adjudication analytics, and protocol design for regulated evidence packages.',
+      'Contribute to DFMEA, software risk controls, and traceability artifacts aligned with FDA 510(k), ISO 14971, and ISO 13485.',
     ],
-    stack: ['ECG Analytics', 'Clinical Validation', 'Python', 'Risk Documentation'],
+    stack: ['ECG Analytics', 'Clinical Validation', 'Python', 'SaMD Risk Documentation'],
   },
   {
     role: 'Trainee R&D Biomedical Engineer',
@@ -20,8 +20,8 @@ const experiences = [
     location: 'Sri Lanka',
     highlights: [
       'Built PPG/ECG signal processing workflows for wearable cardiac monitoring products.',
-      'Benchmarked firmware and MATLAB outputs to support verification and calibration consistency.',
-      'Supported communication protocol and product-level integration testing with mobile applications.',
+      'Benchmarked firmware and MATLAB outputs to support verification, calibration consistency, and signal-quality acceptance.',
+      'Supported communication protocol and product-level integration testing with companion mobile applications.',
     ],
     stack: ['Signal Processing', 'Embedded Validation', 'MATLAB', 'Device QA'],
   },

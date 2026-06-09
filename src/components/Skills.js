@@ -8,8 +8,8 @@ const skillGroups = [
     items: [
       { name: 'TensorFlow', score: 88 },
       { name: 'PyTorch', score: 84 },
-      { name: 'Feature Engineering', score: 90 },
-      { name: 'Signal Classification Pipelines', score: 87 },
+      { name: 'Physiological Feature Engineering', score: 90 },
+      { name: 'ECG/EEG Classification Pipelines', score: 87 },
     ],
   },
   {
@@ -19,7 +19,7 @@ const skillGroups = [
       { name: 'ISO 14971 Risk Management', score: 89 },
       { name: 'IEC 62304 Lifecycle', score: 83 },
       { name: 'FDA 510(k) Validation Traceability', score: 84 },
-      { name: 'Clinical Reliability Reporting', score: 91 },
+      { name: 'Clinical Reliability and Variability Reporting', score: 91 },
     ],
   },
   {
@@ -27,9 +27,9 @@ const skillGroups = [
     subtitle: 'GCP, Docker, Python',
     items: [
       { name: 'Python & Scientific Stack', score: 94 },
-      { name: 'GCP Data Workflows', score: 76 },
+      { name: 'GCP Data Workflows for Research', score: 76 },
       { name: 'Dockerized Experiment Environments', score: 72 },
-      { name: 'Data Integrity Tooling', score: 86 },
+      { name: 'Clinical Data Integrity Tooling', score: 86 },
     ],
   },
   {
@@ -39,7 +39,7 @@ const skillGroups = [
       { name: 'EEG Auditory Attention Decoding', score: 79 },
       { name: 'ECG Arrhythmia Investigation', score: 93 },
       { name: 'Inter-rater Variability Analysis', score: 88 },
-      { name: 'XAI-driven Error Analysis', score: 82 },
+      { name: 'XAI-driven Clinical Error Analysis', score: 82 },
     ],
   },
 ];
@@ -94,8 +94,8 @@ const Skills = () => {
       <div>
         <h2 className="section-title">Skill Matrix</h2>
         <p className="section-subtitle">
-          Dynamic competencies across model development, safety standards, cloud tooling, and
-          clinical research analytics.
+          Domain-specific competencies across biomedical model development, safety standards,
+          clinical data tooling, and translational research analytics.
         </p>
       </div>
 

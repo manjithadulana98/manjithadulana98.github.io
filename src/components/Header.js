@@ -7,7 +7,8 @@ const focusAreas = [
   'AI-Assisted Arrhythmia Validation',
   'Explainable AI for EEG/ECG',
   'Clinical-Grade Signal Analytics',
-  'Regulatory-Aligned SaMD Pipelines',
+  'SaMD Risk and Regulatory Documentation',
+  'Physician-Centered Model Interpretability',
 ];
 
 const Header = () => {
@@ -38,7 +39,7 @@ const Header = () => {
                   'Research Biomedical Engineer',
                   'Clinical AI Validation Specialist',
                   'Data Scientist for Healthcare Signals',
-                  'Explainable AI (XAI) Practitioner',
+                  'Explainable AI (XAI) for Cardiology and Neurotech',
                 ]}
                 typeSpeed={45}
                 backSpeed={26}
@@ -48,8 +49,10 @@ const Header = () => {
             <p className="max-w-3xl text-sm leading-relaxed text-slate-300 sm:text-base">
               I bridge biomedical engineering and artificial intelligence to design clinically dependable
               systems for ECG and EEG signal interpretation. My work focuses on explainable AI (XAI),
-              physiological time-series intelligence, and regulatory-grade validation workflows that align
-              model behavior with physician trust, risk controls, and real-world deployment requirements.
+              physiological time-series intelligence, and regulatory-grade validation workflows. I specialize
+              in translating model outputs into physician-readable evidence through episode-level adjudication,
+              sensitivity-focused analysis, inter-rater reliability reporting, and traceable risk controls for
+              real-world healthcare deployment.
             </p>
 
             <div className="flex flex-wrap gap-2">
@@ -96,7 +99,10 @@ const Header = () => {
                 Biomedical Research Engineer at Synergen Technology Labs.
               </p>
               <p className="rounded-xl border border-cyan-300/20 bg-slate-950/80 p-3">
-                Focus: ventricular arrhythmia detection, reliability metrics, and interpretable model diagnostics.
+                Focus: AFIB, ventricular tachycardia, pause events, and interpretable model diagnostics.
+              </p>
+              <p className="rounded-xl border border-cyan-300/20 bg-slate-950/80 p-3">
+                Standards lens: FDA 510(k), ISO 14971, ISO 13485, and IEC 62304 aligned deliverables.
               </p>
             </div>
           </div>
