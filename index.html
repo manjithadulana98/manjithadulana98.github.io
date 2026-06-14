@@ -106,9 +106,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,27,47,0.8
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
 
 /* Profile photo */
-.photo-ring{width:260px;height:260px;flex-shrink:0;border-radius:50%;padding:4px;background:linear-gradient(135deg,var(--accent) 0%,rgba(79,195,161,0.2) 100%);box-shadow:0 0 40px rgba(79,195,161,0.18)}
-.photo-inner{width:100%;height:100%;border-radius:50%;overflow:hidden;background:var(--card);display:flex;align-items:center;justify-content:center;border:2px solid var(--bg)}
-.photo-inner img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.photo-ring{width:280px;height:340px;flex-shrink:0;border-radius:28px;padding:5px;background:linear-gradient(145deg,var(--accent) 0%,rgba(79,195,161,0.15) 42%,rgba(58,172,255,0.25) 100%);box-shadow:0 26px 50px rgba(8,15,30,0.45),0 0 42px rgba(79,195,161,0.2)}
+.photo-inner{width:100%;height:100%;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#1a2842 0%,#122038 100%);display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,0.08)}
+.photo-inner img{width:100%;height:100%;object-fit:cover;object-position:center 18%;border-radius:24px}
 .photo-fallback{font-family:var(--font-display);font-size:2.8rem;font-weight:700;color:var(--accent);display:none}
 
 /* ════════════════════════════
@@ -151,6 +151,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,27,47,0.8
 .proj-body{padding:24px}
 .proj-body h3{font-size:1rem;margin-bottom:8px}
 .proj-body p{color:var(--text-muted);font-size:0.85rem;line-height:1.6}
+.github-works{margin-top:28px;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px}
+.github-works-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.github-works-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gh-work-card{background:#16233a;border:1px solid var(--border);border-radius:10px;padding:16px;transition:border-color .2s,transform .2s}
+.gh-work-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.gh-work-card h4{font-size:0.92rem;margin-bottom:6px}
+.gh-work-card p{font-size:0.82rem;color:var(--text-muted);margin-bottom:10px;line-height:1.55}
+.gh-link{font-family:var(--font-mono);font-size:0.72rem;color:var(--accent)}
 
 /* ════════════════════════════
    SKILLS
@@ -185,6 +193,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,27,47,0.8
 .cert-name{font-weight:600;font-size:0.88rem;margin-bottom:4px}
 .cert-issuer{font-family:var(--font-mono);font-size:0.72rem;color:var(--accent)}
 .cert-year{font-size:0.78rem;color:var(--text-muted);margin-top:4px}
+.cert-skills{font-size:0.76rem;color:var(--text-muted);margin-top:8px;line-height:1.5}
+.cert-link{display:inline-block;margin-top:10px;font-size:0.78rem;color:var(--accent);text-decoration:none}
+.cert-link:hover{text-decoration:underline}
 
 /* ════════════════════════════
    CONTACT
@@ -208,7 +219,7 @@ footer span{color:var(--accent)}
 ════════════════════════════ */
 @media(max-width:900px){
   .hero-body{grid-template-columns:1fr;gap:40px;text-align:center}
-  .photo-ring{width:200px;height:200px;margin:0 auto}
+  .photo-ring{width:220px;height:270px;margin:0 auto}
   .hero-ctas{justify-content:center}
   .hero-bio{margin-left:auto;margin-right:auto}
   .about-grid{grid-template-columns:1fr}
@@ -217,6 +228,7 @@ footer span{color:var(--accent)}
   .featured-card{grid-template-columns:1fr}
   .featured-thumb{display:none}
   .projects-grid{grid-template-columns:1fr 1fr}
+  .github-works-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:1fr 1fr}
   .certs-grid{grid-template-columns:1fr 1fr}
 }
@@ -261,8 +273,8 @@ footer span{color:var(--accent)}
     <div class="hero-left">
       <p class="hero-eyebrow">Biomedical Research Engineer</p>
       <h1 class="hero-name">Manjitha<br/><span>Kularatne</span></h1>
-      <p class="hero-role">Data Science & AI postgraduate · Synergen Technology Labs</p>
-      <p class="hero-bio">Specialising in ECG &amp; EEG biosignal processing, AI-assisted arrhythmia detection, auditory attention decoding, and vascular image analysis — building clinically rigorous, regulatory-aligned AI for healthcare.</p>
+      <p class="hero-role">Biomedical Research Engineer at Synergen Technology Labs · M.Sc. Data Science &amp; AI (Reading)</p>
+      <p class="hero-bio">Focused on ECG/EEG biosignal intelligence, AI-assisted arrhythmia detection, auditory attention decoding, and retinal vascular analytics. I build clinically grounded, explainable, and regulatory-ready AI workflows for healthcare.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#projects">View Work</a>
         <a class="btn btn-outline" href="#contact">Get in Touch</a>
@@ -634,6 +646,25 @@ footer span{color:var(--accent)}
         </div>
       </div>
     </div>
+
+    <div class="github-works">
+      <div class="github-works-head">
+        <p class="section-label" style="margin:0">GitHub Works</p>
+        <a class="btn btn-outline" href="https://github.com/manjithadulana98?tab=repositories" target="_blank" rel="noopener">View All Repositories</a>
+      </div>
+      <div class="github-works-grid">
+        <a class="gh-work-card" href="https://github.com/manjithadulana98/manjithadulana98.github.io" target="_blank" rel="noopener">
+          <h4>Portfolio Website</h4>
+          <p>Source code for this biomedical AI portfolio, including responsive UX, ECG hero animation, and deployment-ready static build updates.</p>
+          <span class="gh-link">github.com/manjithadulana98/manjithadulana98.github.io</span>
+        </a>
+        <a class="gh-work-card" href="https://github.com/manjithadulana98" target="_blank" rel="noopener">
+          <h4>Research & Engineering Repositories</h4>
+          <p>Active project space for biosignal analytics, machine learning experiments, and healthcare AI workflows across ECG, EEG, and imaging use cases.</p>
+          <span class="gh-link">github.com/manjithadulana98</span>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -753,34 +784,42 @@ footer span{color:var(--accent)}
     <p class="certs-label">Certifications</p>
     <div class="certs-grid">
       <div class="cert-card">
+        <p class="cert-name">DevOps Professional Certificate</p>
+        <p class="cert-issuer">PagerDuty · LinkedIn Learning</p>
+        <p class="cert-year">Issued May 2026</p>
+        <p class="cert-skills">Skills: CI/CD</p>
+        <a class="cert-link" href="https://www.linkedin.com/learning/certificates/8ee8a926d68ac04a069f45661d2e11ca28644b4adaedac1668ef852114a285eb/" target="_blank" rel="noopener">Show credential</a>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">DevOps Foundations: Infrastructure as Code</p>
+        <p class="cert-issuer">LinkedIn Learning</p>
+        <p class="cert-year">Issued May 2026</p>
+        <p class="cert-skills">Skills: IaC, DevOps</p>
+        <a class="cert-link" href="https://www.linkedin.com/learning/certificates/2e29e43ac8bc97ac92e84eed2a203331b80eed1c52a7ea24ee27fba71b78920f/" target="_blank" rel="noopener">Show credential</a>
+      </div>
+      <div class="cert-card">
+        <p class="cert-name">DevOps Foundations</p>
+        <p class="cert-issuer">LinkedIn Learning</p>
+        <p class="cert-year">Issued May 2026</p>
+        <p class="cert-skills">Skills: DevOps</p>
+        <a class="cert-link" href="https://www.linkedin.com/learning/certificates/0484f0ff44aa754ded62f4bebf01729b508d034a31636a79d277d38aac24cb24/" target="_blank" rel="noopener">Show credential</a>
+      </div>
+      <div class="cert-card">
         <p class="cert-name">Fundamentals of Deep Learning</p>
         <p class="cert-issuer">NVIDIA</p>
-        <p class="cert-year">2025</p>
+        <p class="cert-year">Issued Jan 2025 · Credential ID: 1tO0Ys3ITkGJkXM3sgBKrQ</p>
+        <a class="cert-link" href="https://www.linkedin.com/safety/go/?url=https%3A%2F%2Flearn%2Envidia%2Ecom%2Fcertificates%3Fid&urlhash=Z1wa&mt=vRWSrSbE98dSWn5EA0HbT03tJWRf9Fo9zp03UZOTSitFZPJo8GPLB682dslCqYonZeH996OBV9q4LNz8B60VFEefXBs&isSdui=true" target="_blank" rel="noopener">Show credential</a>
       </div>
       <div class="cert-card">
-        <p class="cert-name">Data/Specimens Research Ethics</p>
-        <p class="cert-issuer">CITI Program</p>
-        <p class="cert-year">2025</p>
+        <p class="cert-name">AWS Academy Graduate - AWS Academy Data Engineering</p>
+        <p class="cert-issuer">Amazon Web Services (AWS)</p>
+        <p class="cert-year">Issued Feb 2025</p>
+        <a class="cert-link" href="https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fwww%2Ecredly%2Ecom%2Fbadges%2F8abf7d87-f362-4856-96bd-ff9b7cc55c3f%2Flinked_in_profile&urlhash=wcMV&mt=aId-ui9FeLRDsgKA3eGojLZtPwamt2fnOXdQssWSYZw_XC1yrwG7hv8oGdPwSw3f1wQ7XP7KmpTUzKrp9W_ioz4EEK4&isSdui=true" target="_blank" rel="noopener">Show credential</a>
       </div>
       <div class="cert-card">
-        <p class="cert-name">AWS Academy Data Engineering</p>
-        <p class="cert-issuer">Amazon Web Services</p>
-        <p class="cert-year">2025</p>
-      </div>
-      <div class="cert-card">
-        <p class="cert-name">Introduction to Medical Software</p>
-        <p class="cert-issuer">Yale University</p>
-        <p class="cert-year">2024</p>
-      </div>
-      <div class="cert-card">
-        <p class="cert-name">Machine Learning Specialization</p>
-        <p class="cert-issuer">Stanford University / Coursera</p>
-        <p class="cert-year"></p>
-      </div>
-      <div class="cert-card">
-        <p class="cert-name">Python for Everybody Specialization</p>
-        <p class="cert-issuer">University of Michigan / Coursera</p>
-        <p class="cert-year"></p>
+        <p class="cert-name">AWS Academy Graduate - AWS Academy Microservices and CI/CD Pipeline Builder</p>
+        <p class="cert-issuer">Amazon Web Services (AWS)</p>
+        <p class="cert-year">Issued Jan 2025</p>
       </div>
     </div>
 
