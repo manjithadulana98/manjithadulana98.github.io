@@ -93,10 +93,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,27,47,0.8
 /* ════════════════════════════
    HERO
 ════════════════════════════ */
-#hero{padding:0;min-height:100vh;display:flex;flex-direction:column}
-.ecg-canvas-wrap{width:100%;height:90px;overflow:hidden;border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(79,195,161,0.05) 0%,rgba(17,27,47,0.55) 55%,rgba(17,27,47,0.9) 100%)}
-#ecgCanvas{width:100%;height:90px;display:block}
-.hero-body{flex:1;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;padding:64px 24px 80px;max-width:1140px;margin:0 auto;width:100%}
+#hero{position:relative;padding:0;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-ecg-bg{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0.95}
+#ecgCanvas{width:100%;height:100%;display:block}
+#hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,27,47,0.5) 0%,rgba(17,27,47,0.72) 45%,rgba(17,27,47,0.92) 100%);z-index:1;pointer-events:none}
+.hero-body{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;padding:96px 24px 80px;max-width:1140px;margin:0 auto;width:100%}
 .hero-eyebrow{font-family:var(--font-mono);font-size:0.78rem;color:var(--accent);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:16px}
 .hero-name{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:12px;line-height:1.1}
 .hero-name span{color:var(--accent)}
@@ -253,7 +254,7 @@ footer span{color:var(--accent)}
 
 <!-- ══ HERO ══ -->
 <section id="hero">
-  <div class="ecg-canvas-wrap">
+  <div class="hero-ecg-bg" aria-hidden="true">
     <canvas id="ecgCanvas"></canvas>
   </div>
   <div class="hero-body">
@@ -901,7 +902,7 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => na
     ctx.clearRect(0, 0, W, H);
 
     // subtle grid
-    ctx.strokeStyle = 'rgba(49,82,125,0.42)';
+    ctx.strokeStyle = 'rgba(64,102,150,0.5)';
     ctx.lineWidth = 0.5;
     for(let x=0; x<W; x+=20){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
     for(let y=0; y<H; y+=15){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
@@ -909,11 +910,27 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => na
     // ECG line — tile across full width
     ctx.beginPath();
     ctx.strokeStyle = '#4FC3A1';
-    ctx.lineWidth = 2.2;
+    ctx.lineWidth = 2.4;
     ctx.shadowColor = '#4FC3A1';
-    ctx.shadowBlur = 10;
+    ctx.shadowBlur = 12;
 
     const totalBeats = Math.ceil(W / BEAT_WIDTH) + 3;
+    for(let b = -2; b < totalBeats; b++){
+      for(let i=0;i<beatPts.length;i++){
+        const px = b * BEAT_WIDTH + beatPts[i][0] - offset;
+        const py = beatPts[i][1] * H;
+        if(b === -2 && i === 0){
+          ctx.moveTo(px, py);
+        } else {
+          ctx.lineTo(px, py);
+        }
+      }
+    }
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(79,195,161,0.25)';
+    ctx.lineWidth = 4.5;
     for(let b = -2; b < totalBeats; b++){
       for(let i=0;i<beatPts.length;i++){
         const px = b * BEAT_WIDTH + beatPts[i][0] - offset;
